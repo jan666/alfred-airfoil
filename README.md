@@ -1,11 +1,13 @@
-alfred-airfoil
-==============
+# Usage
 
-Airfoil workflow for Alfred.app
 
-Missing Files
-=============
+## Keywords
 
-417EDFE4-EEA3-4586-BACB-72B5CD1488FA.png
-airfoil.png
-icon.png
+* Select audio source (applications only)
+* afspeaker: Connect to / disconnect from speaker 
+
+# Missing Files
+
+* 417EDFE4-EEA3-4586-BACB-72B5CD1488FA.png
+* airfoil.png
+* icon.png
