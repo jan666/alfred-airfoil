@@ -3,7 +3,7 @@
 
 ## Keywords
 
-* Select audio source (applications only)
+* afsource: Select audio source (applications only)
 * afspeaker: Connect to / disconnect from speaker 
 
 # Missing Files
