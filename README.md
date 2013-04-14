@@ -6,12 +6,9 @@
 * afsource: Select audio source (applications only)
 * afspeaker: Connect to / disconnect from speaker 
 
-# Missing Files
-
-* 417EDFE4-EEA3-4586-BACB-72B5CD1488FA.png
-* airfoil.png
-* icon.png
-
 # Links
 * [Alfred](http://www.alfredapp.com)
 * [Airfoil](http://www.rogueamoeba.com/airfoil/)
+
+# Disclaimer
+Airfoil and the Airfoil icon are the property of Rogue Amoeba Software, LLC.
