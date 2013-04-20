@@ -64,31 +64,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>4</integer>
-				<key>keyword</key>
-				<string>afsource</string>
-				<key>runningsubtext</key>
-				<string>Loading...</string>
-				<key>script</key>
-				<string>tell application "Airfoil"		set res to "&lt;?xml version='1.0'?&gt;&lt;items&gt;"	set aList to every application source		set listThem to {}		repeat with src in aList		set listThem to listThem &amp; {{name of src, id of src}}	end repeat		repeat with src in aList		set srcName to name of src		set srcId to id of src		set itemText to "&lt;item uid=\"" &amp; srcId &amp; "\" arg=\"" &amp; srcId &amp; "\"&gt;&lt;title&gt;" &amp; srcName &amp; "&lt;/title&gt;&lt;subtitle&gt;" &amp; "select " &amp; srcName &amp; "&lt;/subtitle&gt;"		set itemText to itemText &amp; "&lt;icon&gt;airfoil.png&lt;/icon&gt;&lt;/item&gt;"		set res to res &amp; itemText	end repeat		set res to res &amp; "&lt;/items&gt;"	end tell</string>
-				<key>title</key>
-				<string>Airfoil Source Selection</string>
-				<key>type</key>
-				<integer>6</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>5570A5FD-39EA-4DE6-85B1-01F86EBB0FF0</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>applescript</key>
 				<string>on alfred_script(q)
 
@@ -103,48 +78,6 @@ end alfred_script</string>
 			<string>alfred.workflow.action.applescript</string>
 			<key>uid</key>
 			<string>2C2B5ADC-50D0-4495-AFB6-C05077291E5B</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>applescript</key>
-				<string>on alfred_script(q)
-
---set srcId to "2" as integerset srcId to q as integertell application "Airfoil"	set srcList to every application source whose id is srcId	set src to first item of srcList	set current audio source to srcend tell
-
-end alfred_script</string>
-				<key>cachescript</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
-			<key>uid</key>
-			<string>FE6E013B-F496-4110-974C-AE7DE868A1FE</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>3</integer>
-				<key>argumenttext</key>
-				<string>afsource</string>
-				<key>hotkey</key>
-				<integer>64</integer>
-				<key>hotmod</key>
-				<integer>8388608</integer>
-				<key>hotstring</key>
-				<string>F17</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>3B526A2C-AF8D-41E2-9674-AD4D284CB679</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -196,9 +129,76 @@ end alfred_script</string>
 			<key>uid</key>
 			<string>6744BA2A-F0A2-40A5-93A6-5D286AA5EEE8</string>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>keyword</key>
+				<string>afsource</string>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string>tell application "Airfoil"		set res to "&lt;?xml version='1.0'?&gt;&lt;items&gt;"	set aList to every application source		set listThem to {}		repeat with src in aList		set listThem to listThem &amp; {{name of src, id of src}}	end repeat		repeat with src in aList		set srcName to name of src		set srcId to id of src		set itemText to "&lt;item uid=\"" &amp; srcId &amp; "\" arg=\"" &amp; srcId &amp; "\"&gt;&lt;title&gt;" &amp; srcName &amp; "&lt;/title&gt;&lt;subtitle&gt;" &amp; "select " &amp; srcName &amp; "&lt;/subtitle&gt;"		set itemText to itemText &amp; "&lt;icon type=\"fileicon\"&gt;/Applications/" &amp; name of src &amp; ".app&lt;/icon&gt;&lt;/item&gt;"		set res to res &amp; itemText	end repeat		set res to res &amp; "&lt;/items&gt;"	end tell</string>
+				<key>title</key>
+				<string>Airfoil Source Selection</string>
+				<key>type</key>
+				<integer>6</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>5570A5FD-39EA-4DE6-85B1-01F86EBB0FF0</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+
+--set srcId to "2" as integerset srcId to q as integertell application "Airfoil"	set srcList to every application source whose id is srcId	set src to first item of srcList	set current audio source to srcend tell
+
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>FE6E013B-F496-4110-974C-AE7DE868A1FE</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>3</integer>
+				<key>argumenttext</key>
+				<string>afsource</string>
+				<key>hotkey</key>
+				<integer>64</integer>
+				<key>hotmod</key>
+				<integer>8388608</integer>
+				<key>hotstring</key>
+				<string>F17</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>3B526A2C-AF8D-41E2-9674-AD4D284CB679</string>
+		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>Airfoil and the Airfoil icon are the property of Rogue Amoeba Software, LLC.</string>
 	<key>uidata</key>
 	<dict>
 		<key>2C2B5ADC-50D0-4495-AFB6-C05077291E5B</key>
